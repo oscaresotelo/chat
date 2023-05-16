@@ -32,7 +32,7 @@ st.title("Hola Chatbot")
 
 # Función para traducir el texto de español a inglés
 def translate_to_english(text):
-    translator = Translator(to_lang="en")
+    translator = Translator(to_lang="en", from_lang="es")
     translation = translator.translate(text)
     return translation
 
@@ -61,9 +61,9 @@ def generate_answer():
 
 
 st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
-titulo = translate_to_english("como estas")
-ingles = translate_to_spanish("how are you?")
-st.write(titulo)
-st.write(ingles)
+# titulo = translate_to_english("como estas")
+# ingles = translate_to_spanish("how are you?")
+# st.write(titulo)
+# st.write(ingles)
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
