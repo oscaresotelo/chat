@@ -61,6 +61,7 @@ def generate_answer():
 
 
 st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
-st.write(translate_to_english(st.text_input))
+titulo = translate_to_english("como estas")
+st.write(titulo)
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
