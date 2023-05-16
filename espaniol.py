@@ -45,7 +45,8 @@ def translate_to_spanish(text):
 def generate_answer():
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
-    st.write(user_message)
+    inputs = translate_to_english(user_message)
+    st.write(inputs)
     inputs = tokenizer(translate_to_english(st.session_state.input_text), return_tensors="pt")
 
     result = model.generate(**inputs)
