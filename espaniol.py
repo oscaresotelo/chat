@@ -60,7 +60,7 @@ def generate_answer():
     st.session_state.history.append({"message": message_bot, "is_user": False})
 
 
-st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
+st.text_input("Pone tu mensaje", key="input_text", on_change=generate_answer)
 # titulo = translate_to_english("como estas")
 # ingles = translate_to_spanish("how are you?")
 # st.write(titulo)
