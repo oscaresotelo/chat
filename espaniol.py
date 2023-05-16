@@ -45,8 +45,7 @@ def translate_to_spanish(text):
 def generate_answer():
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
-    tipo = translate_to_english(st.session_state.input_text)
-    st.write(tipo)
+    
     
     inputs = tokenizer(translate_to_english(st.session_state.input_text), return_tensors="pt")
 
@@ -62,6 +61,6 @@ def generate_answer():
 
 
 st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
-
+st.write(translate_to_english(st.text_input))
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
