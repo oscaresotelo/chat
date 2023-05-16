@@ -17,6 +17,8 @@ idna==3.4
 importlib-metadata==6.6.0
 Jinja2==3.1.2
 jsonschema==4.17.3
+libretranslatepy==2.1.1
+lxml==4.9.2
 markdown-it-py==2.2.0
 MarkupSafe==2.1.2
 mdurl==0.1.2
@@ -51,6 +53,7 @@ torch==2.0.1
 tornado==6.3.2
 tqdm==4.65.0
 transformers==4.29.1
+translate==3.6.1
 typing_extensions==4.5.0
 tzdata==2023.3
 tzlocal==5.0.1
