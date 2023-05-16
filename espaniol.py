@@ -28,7 +28,7 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.title("Hola Chatbot")
+st.title("El Chat de las Princesas")
 
 # Función para traducir el texto de español a inglés
 def translate_to_english(text):
